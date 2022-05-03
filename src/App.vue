@@ -1,6 +1,25 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "@/components/HelloWorld.vue";
+
+
+// var joueur = {
+//   nom: 'Joueur1',
+//   age: 10,
+// };
+
+// // DESTRUCTURATION : EXTRACTION D'ATTRIBUT
+// var { nom } = joueur;
+// console.log(nom)
+
+// // CLONE + AJOUT D'ATTRIBUT
+// var joueur2 = {...joueur, sexe: "homme"}
+// console.log(joueur2)
+
+// // CLONE + SUPPRESSION D'ATTRIBUE
+// var { ...joueur3 } = joueur2
+// console.log(joueur3)
+
 </script>
 
 <template>
@@ -19,6 +38,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/login">Login</RouterLink>
       </nav>
     </div>
   </header>
