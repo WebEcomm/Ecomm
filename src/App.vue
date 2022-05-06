@@ -2,7 +2,6 @@
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "@/components/HelloWorld.vue";
 
-
 // var joueur = {
 //   nom: 'Joueur1',
 //   age: 10,
@@ -19,7 +18,6 @@ import HelloWorld from "@/components/HelloWorld.vue";
 // // CLONE + SUPPRESSION D'ATTRIBUE
 // var { ...joueur3 } = joueur2
 // console.log(joueur3)
-
 </script>
 
 <template>
