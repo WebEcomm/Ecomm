@@ -1,48 +1,34 @@
-<template>
-  <header-view/>
-  <router-view/>
-</template>
-
 <script setup>
-import { HeaderView } from '@/views';
+import { RouterLink, RouterView } from "vue-router";
+
+// var joueur = {
+//   nom: 'Joueur1',
+//   age: 10,
+// };
+
+// // DESTRUCTURATION : EXTRACTION D'ATTRIBUT
+// var { nom } = joueur;
+// console.log(nom)
+
+// // CLONE + AJOUT D'ATTRIBUT
+// var joueur2 = {...joueur, sexe: "homme"}
+// console.log(joueur2)
+
+// // CLONE + SUPPRESSION D'ATTRIBUE
+// var { ...joueur3 } = joueur2
+// console.log(joueur3)
 </script>
 
-<style lang="scss">
-/*========== VARIABLES ==========*/
-@use '@/assets/styles' as *;
-/*========== GOOGLE FONTS `Poppins` ==========*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+<template>
+  <header>
+    <nav>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/about">About</RouterLink>
+      <RouterLink to="/login">Login</RouterLink>
+    </nav>
+  </header>
 
-/*========== BASE ==========*/
-::-webkit-scrollbar { display: none; }
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html {
-  scroll-behavior: smooth;
-  body {
-    font-family: $font-body-font;
-    font-size: $size-m;
-    color: $color-text;
-    background-color: $color-body;
-    h1,h2,h3 { font-weight: $font-medium; color: $color-title; }
-    ul { list-style: none; }
-    // a { text-decoration: none; } /* on utilise <router-link class="link"> pour les liens
-    .link { text-decoration: none; color: $color-text; }
-    button { @extend input; cursor: pointer; }
-    input { border: none; outline: none; background: none; }
-    img { max-width: 100%; height: auto; object-fit: cover; }
-    main { overflow: hidden; }
-    section { 
-      padding: 2*$size-xxl 0 $size-xxl 0;
-      .title { 
-        margin-bottom: $size-biggest/2; 
-        text-align: center;
-        font-size: $size-biggest;  
-      } 
-    }
-    .container { 
-      max-width: $size-max-width;
-      margin: 0 $size-xl;
-    }
-  }
-}
-</style>
+  <RouterView />
+</template>
+
+<style></style>
