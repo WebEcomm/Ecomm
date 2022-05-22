@@ -72,11 +72,11 @@ input:focus:not([type="submit"]) {
 input::placeholder {
   color: inherit;
 }
-form.login input:not([type="submit"]) {
+form.register input:not([type="submit"]) {
   color: #2c3e50;
   border-bottom: 2px solid #2c3e50;
 }
-form.login input[type="submit"] {
+form.register input[type="submit"] {
   background-color: grey;
   color: #fff;
   font-weight: 700;

@@ -17,16 +17,18 @@ import { RouterLink, RouterView } from "vue-router";
 // // CLONE + SUPPRESSION D'ATTRIBUE
 // var { ...joueur3 } = joueur2
 // console.log(joueur3)
+
+// a ajoueter<RouterLink to="/logout">Logout</RouterLink>
 </script>
 
 <template>
   <header>
     <nav>
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">Register</RouterLink>
+      <RouterLink to="/register">Register</RouterLink>
       <RouterLink to="/login">Login</RouterLink>
-      <RouterLink to="/login">Dashboard</RouterLink>
-      <RouterLink to="/login">Logout</RouterLink>
+      <RouterLink to="/dashboard">Dashboard</RouterLink>
+      
      
 
     </nav>
