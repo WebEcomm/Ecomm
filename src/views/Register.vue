@@ -12,14 +12,16 @@
 </template>
 
 <script>
-function data(){ 
-  return { 
-    email: '', 
-    password: '', 
-  }; 
-}
+import firebase from "firebase";
+export default{
+   data(){  
+     return{
+      email: '', 
+      password: '', 
+  };
+},
 methods: {
-  function register() {
+   register() {
     firebase
       .auth()
       .createUserWithEmailAndPassword(this.email, this.password)
@@ -30,7 +32,8 @@ methods: {
       .catch(error => {
         alert(error.message);
       });
-  }
+  },
+},
 }
 </script>
 
