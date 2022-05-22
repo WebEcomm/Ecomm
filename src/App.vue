@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 
+
 // var joueur = {
 //   nom: 'Joueur1',
 //   age: 10,
