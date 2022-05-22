@@ -1,17 +1,38 @@
 <template>
-  <main class="login">
+  <main class="register">
     <section class="forms">
-      <form class="login" @submit.prevent="login">
-        <h2>Login</h2>
+      <form class="register" @submit.prevent="register">
+        <h2>register</h2>
         <input type="email" placeholder="Email address" />
         <input type="password" placeholder="Password" />
-        <input type="submit" value="Login" />
+        <input type="submit" value="Register" />
       </form>
     </section>
   </main>
 </template>
 
-<script></script>
+<script>
+function data(){ 
+  return { 
+    email: '', 
+    password: '', 
+  }; 
+}
+methods: {
+  function register() {
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(this.email, this.password)
+      then(() => {
+        alert('Successfully registered! Please login.');
+        this.$router.push('/');
+      })
+      .catch(error => {
+        alert(error.message);
+      });
+  }
+}
+</script>
 
 <style>
 .forms {
